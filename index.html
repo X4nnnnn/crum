@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost/crum/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .btn-danger {
+            background-color: #f44336;
+        }
+        .btn-primary {
+            background-color: #2196F3;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Patient Management System</h1>
+
+    <!-- Patient List Table -->
+    <h2>Patient List</h2>
+    <table>
+        <tbody><tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+                <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>123 Main St</td>
+            <td>
+                <a href="http://localhost/crum/?edit=1" class="btn btn-primary">Edit</a>
+                <a href="http://localhost/crum/?delete=1" class="btn btn-danger" onclick="return confirm(&#39;Are you sure you want to delete this patient?&#39;)">Delete</a>
+            </td>
+        </tr>
+                <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>456 Oakland St</td>
+            <td>
+                <a href="http://localhost/crum/?edit=2" class="btn btn-primary">Edit</a>
+                <a href="http://localhost/crum/?delete=2" class="btn btn-danger" onclick="return confirm(&#39;Are you sure you want to delete this patient?&#39;)">Delete</a>
+            </td>
+        </tr>
+            </tbody></table>
+
+    <br>
+
+    <!-- Add/Edit Patient Form -->
+    <h2>Add New Patient</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required="" value="">
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" required=""></textarea>
+        </div>
+        <div class="form-group">
+                            <input type="submit" name="add" value="Add Patient" class="btn">
+                    </div>
+    </form>
+</div>
+
+
+
+</body></html>
